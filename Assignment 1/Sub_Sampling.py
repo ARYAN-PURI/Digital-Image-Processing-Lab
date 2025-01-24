@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-image=cv2.imread('./MR.pgm',0)
+image=cv2.imread('./Assignment 1/MR.pgm',0)
 image=cv2.resize(image,(512,512))
 height=image.shape[0]
 width=image.shape[1]
@@ -11,7 +11,6 @@ for i in range(height):
             if(j%2==0):
                 image2[int(i/2)][int(j/2)]=image[i][j]
 cv2.imshow('Orignal Image',image)
-cv2.waitKey(0)
 cv2.imshow('Sub Sampled Image',image2)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
